@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For my favourite person 🤍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #fff6f8;
+  color: #444;
+  text-align: center;
+}
+
+h1 {
+  margin: 24px 12px;
+  font-weight: 500;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 22px 14px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.card:active {
+  transform: scale(0.97);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.content {
+  background: #ffffff;
+  margin: 8vh auto;
+  padding: 18px;
+  width: 92%;
+  max-width: 520px;
+  border-radius: 18px;
+  text-align: left;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.content h2 {
+  margin-top: 0;
+}
+
+img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+}
+</style>
+</head>
+
+<body>
+
+<h1>For my favourite person 🤍</h1>
+
+<div class="cards">
+  <div class="card" onclick="openCard(1)">🎂 Birthday Message</div>
+  <div class="card" onclick="openCard(2)">📸 A Special Photo</div>
+  <div class="card" onclick="openCard(3)">🧠 Memories</div>
+  <div class="card" onclick="openCard(4)">🌟 Wishes</div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="content">
+    <span class="close" onclick="closeCard()">×</span>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+function openCard(n) {
+  const modal = document.getElementById("modal");
+  const c = document.getElementById("modal-content");
+
+  if (n === 1) {
+    c.innerHTML = `
+    <h2>🎂 Happy Birthday Jiiiijiiiiiiiiii 🌼❣️</h2>
+    <p>
+    Tum jio harazo saal,<br>
+    Saal me din ho pachashazar, hai meri yahe aarjuuu.<br>
+    Happy Birthday to you.<br>
+    Happy Birthday to you.
+    </p>`;
+  }
+
+  if (n === 2) {
+    c.innerHTML = `
+    <p><b>No matter what, you’ll always be my safest place 🤍</b></p>
+    <p>(Photo intentionally kept private)</p>`;
+  }
+
+  if (n === 3) {
+    c.innerHTML = `
+<pre>
+Happy Birthday
+
+Toooooo...
+
+#BestJijiEver✌️
+#Mostbeautifulperson🙂‍↔️
+#SeniorCitizenInMaking 😜😁
+#BossLadySinceBirth🙂
+#PermanentScoldingMode🤐
+#MeriFirstManager🙂
+#FreeLifeCoach🤧
+#AlwaysRightJiji😮‍💨
+#JijiSupremacy🫣
+#EmotionalBlackmailProMax🥲
+#JudgeJuryExecutioner😵‍💫
+#NoRefundNoExchange🙃
+#ForeverGrateful🤗
+#MeriSafestPlace♾️
+</pre>`;
+  }
+
+  if (n === 4) {
+    c.innerHTML = `
+<pre>
+You’ve always been there for me.
+Through everything — good, bad, messy.
+
+You’re not just my sister,
+you are my favourite person.
+
+Aapke Kamal 🪷 charano👣 sirodhar 🙇
+</pre>`;
+  }
+
+  modal.style.display = "block";
+}
+
+function closeCard() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+  </html>
